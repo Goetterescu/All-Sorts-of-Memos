@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <style>
+        h1 {
+            font-size: 4vw;
+            text-align: center;
+            text-decoration: underline;
+        }
+        h2,h3 {
+            font-size: 2.35vw;
+            text-align: center;
+        }
+        p,b,i,summary {
+            font-size: 1.3vw;
+        }
+        p {
+            margin: 1vw;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+
+
+        article>details>summary {
+            background-color: gray;
+            border: 0.1vw solid lightblue;
+            margin: 1vw;
+        }
+
+
+
+        article#shared {
+            display:none;
+        }
+        article#extra_low {
+            display:none;
+        }
+        article#low {
+            display:none;
+        }
+
+        summary:hover {
+            background-color: white;
+        }
+
+        nav>i {
+            background-color: gray;
+            margin: 1vw;
+        }
+        nav>i:hover {
+            cursor: crosshair;
+        }
+    </style>
+    <script>
+        function call(section) {
+            document.querySelector("article#shared").style="display:none";
+            document.querySelector("article#extra_low").style="display:none";
+            document.querySelector("article#low").style="display:none";
+            switch(section) {
+                case "a": document.querySelector("article#shared").style="display:block";
+                break;
+                case "b": document.querySelector("article#extra_low").style="display:block";
+                break;
+                case "c": document.querySelector("article#low").style="display:block";
+                break;
+            }
+        }
+    </script>
+    <body>
+        <header>
+            <h1>List of Tools for 💥</h1>
+            <noscript><h2><i>OI! Your browser is not supporting Javascript! Fix this or everything will be awkward!</i></h2></noscript>
+        </header>
+
+
+
+        <nav>
+            <i onclick="call('a')">Shared Tools</i>
+            <i onclick="call('b')">Extra Low Voltage Tools</i>
+            <i onclick="call('c')">Low Voltage Tools</i>
+        </nav>
+
+
+
+        <hr>
+        <article id="shared">
+            <h2>These tools can come in handy at any kind of job</h2>
+            <details>
+                <summary><a href="https://www.bosch-professional.com/gb/en/products/glm-40-0601072900">Bosch Laser Measurer | GLM 40</a></summary>
+                <p>
+                    For some reason, even the smallest rooms are over 2 meters wide. You don't want to use your meter twice. Use this instead, you will get over the price after you've 
+                    saved yourself time and trouble.
+                </p>
+            </details>
+        </article>
+
+
+
+        <article id="extra_low">
+            <h2>Tools for jobs under extra low voltage</h2>
+            <details>
+                <summary>Insulation strippers</summary>
+                <details>
+                    <summary><a href="https://www.knipex.com/products/wire-strippers-and-stripping-tools/automatic-insulation-stripper/automatic-insulation-stripper/1262180">Automatic Insulation Stripper | 12 62 180</a></summary>
+                    <p>
+                        This is an expensive example, but there are even cheaper and better ones. Handy for stranded wires.
+                    </p>
+                </details>
+            </details>
+
+            <details>
+                <summary>Pliers</summary>
+                <details>
+                    <summary><a href="https://www.knipex.de/produkte/elektronikzangen/electronic-super-knips/electronic-super-knips/7813125">Electronic Super Knips® | 78 13 125</a></summary>
+                    <p>
+                        For the tiniest of wires.
+                    </p>
+                </details>
+            </details>
+
+            <details>
+                <summary>Multi-meters</summary>
+                <details>
+                    <summary>Voltcraft | VC130-1</summary>
+                    <p>
+                        My personal multi-meter. Cheap and good enough for what it's being used for.
+                    </p>
+                </details>
+            </details>
+        </article>
+
+
+
+        <article id="low">
+            <h2>Tools for jobs under low voltage</h2>
+                <details>
+                    <summary>Insulation strippers</summary>
+                    <details>
+                        <summary><a href="https://www.knipex.com/products/wire-strippers-and-stripping-tools/knipex-strix-insulation-strippers-with-cable-shears/knipex-strix-insulation-strippers-cable-shears/1366180">StriX® | 13 66 180</a></summary>
+                        <p>
+                            Two-in-one tool for every end-installation. You can cut, dismantle (if you are skilled) and uninsulate cables. 
+                            The guidance marks make it easy to take off just the right length of insulation! I have cut up to 5x16mm² with these before. 
+                            This is an must-have for every electrician.
+                        </p>
+                    </details>
+                </details>
+
+                <details>
+                    <summary>Stripping tools</summary>
+                    <details>
+                        <summary><a href="https://www.knipex.com/products/insulated-tools/stripping-knives-with-guide-shoe/stripping-knives-guide-shoe/9855">Knife | 98 55</a></summary>
+                        <p>
+                            This big boy will come in handy when you are dealing with <i>cables</i> starting from 25mm².
+                        </p>
+                    </details>
+                    <details>
+                        <summary><a href="https://www.knipex.com/products/wire-strippers-and-stripping-tools/universal-stripping-tools/universal-stripping-tools/1685125SB">Universal Stripping Tool | 16 85 125 SB</a></summary>
+                        <p>
+                            Suited for most "regular" sized cables. Put it around the cable, twist a few times and pull towards you.
+                        </p>
+                    </details>
+                    <details>
+                        <summary><a href="https://www.knipex.com/products/wire-strippers-and-stripping-tools/stripping-tools-for-spiral-cutting/stripping-tools-spiral-cutting/1630135SB">Dismantling Tool | 16 30 135 SB</a></summary>
+                        <p>
+                            I personally curse this tool, but it can be handy when everything else fails. It's good to use this one when dismantling long distances (like over one meter).
+                        </p>
+                    </details>
+                </details>
+
+                <details>
+                    <summary>Measuring instruments</summary>
+                    <details>
+                        <summary><a href="https://www.benning.de/products-en/testing-measuring-and-safety-equipment/test-equipment-voltage-tester/voltage-tester-duspol.html">DUSPOL®-Voltage Testers | 050261</a></summary>
+                        <p>
+                            Truly the greatest measuring device there is. You can check for a phase by using only one probe; You can check up to 1kV; You can check for continuity 
+                            (not with this one, you'll need the digital version for this); You can test an RCD with it; You can check the direction of your phases. <b>YOU WILL NEED THIS</b>!
+                        </p>
+                    </details>
+                </details>
+
+                <details>
+                    <summary>More</summary>
+                    <details>
+                        <summary>Cimco Fuseglove (for german market)| 140210</summary>
+                        <p>
+                            This tool seems to be used advertised for germany. Perhaps you will not even need this, since it's for 
+                        <a href="https://artcase-shop.de/media/images/mitschuhb3/info/I20439_Siemens_3NA3_814_NH_Sicherung_Gr000__35A_AC_500V_glgG.jpg">NH-Fuses</a> only.
+                    </p>
+                    </details>
+                </details>
+        </article>
+        <hr>
+        <footer></footer>
+    </body>
+</html>
